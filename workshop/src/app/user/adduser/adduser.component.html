@@ -41,6 +41,11 @@
     <input type="text" class="form-control" id="cc" name="cc" [(ngModel)]="customer" required readonly>
     <br>
 
+    <label for="sk">Skills</label>
+    <input type="text" class="form-control" id="sk" name="sk" ngModel required #sk="ngModel" >
+    <small class="text text-danger" *ngIf="pf.errors?.['required']">Skills is required</small>
+    <br>
+
 
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">Submit</button>

@@ -24,6 +24,9 @@ import {UserService} from "../Core/Services/user.service";
     UserRoutingModule,
     ReactiveFormsModule
   ],
-  providers:[InvoiceListComponent,UserService]
+  exports: [
+    UsersComponent
+  ],
+  providers: [InvoiceListComponent, UserService]
 })
 export class UserModule { }

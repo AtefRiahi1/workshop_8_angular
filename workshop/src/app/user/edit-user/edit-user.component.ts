@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../Models/user";
 import {UserService} from "../../Core/Services/user.service";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormArray, FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-edit-user',
@@ -12,8 +12,19 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class EditUserComponent implements OnInit{
   id!:number;
   user!:User;
-  updateForm!:FormGroup;
-  constructor(private userService:UserService,private actR:ActivatedRoute,private R:Router) {
+  updateForm=this.FormB.group({
+    id:[0],
+    firstName:[''],
+    lastName:[''],
+    birthDate:[''],
+    email:[''],
+    password:[''],
+    profession:[''],
+    accountCategory:[''],
+    picture:[''],
+    skills:this.FormB.array([new FormControl('',Validators.minLength(3)),new FormControl('',Validators.minLength(3))])
+  });
+  constructor(private userService:UserService,private actR:ActivatedRoute,private R:Router,private FormB:FormBuilder) {
   }
   getParam(){
     //this.id=Number(this.actR.snapshot.paramMap.get('id'));
@@ -22,7 +33,8 @@ export class EditUserComponent implements OnInit{
   ngOnInit() {
     this.getParam()
     this.userService.getUserById(this.id).subscribe((data)=>{this.user=data;
-      this.updateForm=new FormGroup({
+      this.updateForm.setValue(this.user);
+      /* this.updateForm=new FormGroup({
         id:new FormControl(this.user.id),
         fn:new FormControl(this.user.firstName),
         ln:new FormControl(this.user.lastName),
@@ -31,9 +43,17 @@ export class EditUserComponent implements OnInit{
         pw:new FormControl(),
         pr:new FormControl(this.user.profession),
         ac:new FormControl(this.user.accountCategory),
-        pic:new FormControl(this.user.picture)
-      })
+        pic:new FormControl(this.user.picture),
+        skills:new FormArray([new FormControl(this.user.skills[0],Validators.minLength(3)),new FormControl(this.user.skills[1],Validators.minLength(3))])
+      })*/
     });
+  }
+  get skills(){
+    return this.updateForm.get('skills') as FormArray;
+  }
+
+  addSkills(){
+    this.skills.push(new FormControl('',Validators.minLength(3)));
   }
 
   update(){

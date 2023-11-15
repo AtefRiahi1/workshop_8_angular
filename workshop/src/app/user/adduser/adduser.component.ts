@@ -36,7 +36,8 @@ export class AdduserComponent {
       email: F.value.em,
       password: F.value.pw,
       picture: "https://bootdey.com/img/Content/avatar/avatar5.png",
-      profession: F.value.pf
+      profession: F.value.pf,
+      skills: F.value.sk
     }
     this.userservice.addUser(newUser).subscribe(()=>{
       alert("user added");

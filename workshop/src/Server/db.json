@@ -9,7 +9,11 @@
       "email": "mila@kunis.com",
       "password": "test",
       "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     },
     {
       "id": 2,
@@ -20,7 +24,11 @@
       "password": "test",
       "profession": "Software Engineer",
       "accountCategory": "Admin",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png"
+      "picture": "https://bootdey.com/img/Content/avatar/avatar3.png",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     },
     {
       "id": 3,
@@ -31,7 +39,11 @@
       "password": "test",
       "profession": "Software Engineer",
       "accountCategory": "Customer",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png"
+      "picture": "https://bootdey.com/img/Content/avatar/avatar1.png",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     },
     {
       "id": 4,
@@ -42,7 +54,11 @@
       "email": "Ryan@nicholson.com",
       "password": "test",
       "picture": "https://bootdey.com/img/Content/avatar/avatar4.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     },
     {
       "id": 5,
@@ -53,29 +69,26 @@
       "email": "robert@nicholson.com",
       "password": "test",
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     },
     {
-      "id": 6,
+      "id": 1700043518882,
       "firstName": "atef",
       "lastName": "riahi",
-      "birthDate": "2023-10-13",
+      "birthDate": "2000-01-14",
       "accountCategory": "Customer",
       "email": "atef@gmail.com",
-      "password": "atef1234",
+      "password": "atefriahi",
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "Software Engineer"
-    },
-    {
-      "id": 1698663728730,
-      "firstName": "atef",
-      "lastName": "riahi",
-      "birthDate": "2023-10-13",
-      "accountCategory": "Customer",
-      "email": "atef@gmail.com",
-      "password": "atef12345",
-      "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
-      "profession": "Software Engineer"
+      "profession": "Software Engineer",
+      "skills": [
+        "Angular",
+        "Spring"
+      ]
     }
   ],
   "products": [
