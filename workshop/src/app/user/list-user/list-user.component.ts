@@ -13,8 +13,8 @@ export class ListUserComponent {
   constructor(private Router:Router,private userservice:UserService) {
   }
   list:User[]=[];
+  search!:string;
 
- search!:string;
 
   protected readonly User = User;
 
@@ -23,13 +23,7 @@ export class ListUserComponent {
 
   }*/
 
-  delete(i :number){
-    this.userservice.deleteUser(i).subscribe(()=>{
-      alert("user deleted");
-      this.Router.navigate(["users"]);
-    });
 
-  }
 
   ngOnInit(){
     this.userservice.getAllUsers().subscribe((data:User[])=>this.list=data);
@@ -38,6 +32,14 @@ export class ListUserComponent {
 
   add(){
     this.Router.navigate(["users/adduser"]);
+  }
+
+  delete(i :number){
+    this.userservice.deleteUser(i).subscribe(()=>{
+      alert("user deleted");
+      this.Router.navigate(["users"]);
+    });
+
   }
 }
 

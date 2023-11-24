@@ -76,7 +76,7 @@
       ]
     },
     {
-      "id": 1700043518882,
+      "id": 1700472895180,
       "firstName": "atef",
       "lastName": "riahi",
       "birthDate": "2000-01-14",
@@ -85,10 +85,7 @@
       "password": "atefriahi",
       "picture": "https://bootdey.com/img/Content/avatar/avatar5.png",
       "profession": "Software Engineer",
-      "skills": [
-        "Angular",
-        "Spring"
-      ]
+      "skills": "Angular"
     }
   ],
   "products": [

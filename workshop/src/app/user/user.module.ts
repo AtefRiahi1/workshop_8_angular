@@ -9,6 +9,7 @@ import {EditUserComponent} from "./edit-user/edit-user.component";
 import {InvoiceListComponent} from "../invoice-list/invoice-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {UserService} from "../Core/Services/user.service";
+import { UserItemComponent } from './user-item/user-item.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {UserService} from "../Core/Services/user.service";
     ListUserComponent,
     UsersComponent,
     AdduserComponent,
-    EditUserComponent
+    EditUserComponent,
+    UserItemComponent
   ],
   imports: [
     FormsModule,
